@@ -11,8 +11,7 @@ namespace KiK
     public partial class MainForm : Form
     {
         bool kolejka = true;// true = kolejka X, false = kolejka O
-        int liczba_kolejek = 0;
-        //static String Gracz.gracz1, Gracz.gracz2;
+        int liczba_kolejek = 0;        
         bool zKomputerem = false;// false gracz przecoiwko graczowi, true gracz przeciwko komputerowi
 
 
@@ -21,19 +20,10 @@ namespace KiK
         {
 
             InitializeComponent();
-            Gracz gracze = new Gracz();
+            Gracz gracze = new Gracz();            
 
         }
-        //Metoda wczytująca nazwy graczy z Form1
-        /*
-        public static void UstawNazwy(String g1, String g2)//-WŁ
-        {
-		
-            Gracz.gracz1=g1;	
-            Gracz.gracz2=g2;
-		
-        }
-        */
+        
 
 
         void ZasadyGryToolStripMenuItemClick(object sender, EventArgs e) //-MK
@@ -75,7 +65,7 @@ namespace KiK
 
             if ((!kolejka) && (zKomputerem))//jeśli kolejka=true i zKomputerem=true komputer wykonuje ruch
             {
-                ruchKomputera();
+                RuchKomputera.ruchKomputera();
             }
 
         }
@@ -83,174 +73,9 @@ namespace KiK
         //Główna metoda powodująca zaznaczenie pola przez komputer
         private void ruchKomputera()//-WŁ
         {
-            //Priorytety komputera
-            //1. Wygrywa jeśli może
-            //2. Jesli gracz X może wygrac zablokować ruch
-            //3.Zajmij pole w rogu
-            //4.Zajmij wolne pole
-
-            Button ruch = null;
-
-
-            ruch = WygrajLubBlokuj("O");
-            if (ruch == null)
-            {
-                ruch = WygrajLubBlokuj("X");
-                if (ruch == null)
-                {
-                    ruch = ZajmijRogi();
-                    if (ruch == null)
-                    {
-                        ruch = wolnePole();
-                    }
-                }
-            }
-            if (liczba_kolejek < 9) ruch.PerformClick();
-
-
-
-
-        }
-        //Metoda sprawdzająca które pola sa wolne
-        private Button wolnePole()//-WŁ
-        {
-
-            Button b = null;
-            foreach (Control c in Controls)
-            {
-                b = c as Button;
-                if (b != null)
-                {
-                    if (b.Text == "") return b;
-
-                }
-            }
-            return null;
-        }
-        //Metoda sprawdzajaća który zrogów pola może zając komputer
-        private Button ZajmijRogi()//-WŁ
-        {
-            if (A1.Text == "O")
-            {
-                if (A3.Text == "")
-                    return A3;
-                if (C3.Text == "")
-                    return C3;
-                if (C1.Text == "")
-                    return C1;
-            }
-
-            if (A3.Text == "O")
-            {
-                if (A1.Text == "")
-                    return A1;
-                if (C3.Text == "")
-                    return C3;
-                if (C1.Text == "")
-                    return C1;
-            }
-
-            if (C3.Text == "O")
-            {
-                if (A1.Text == "")
-                    return A3;
-                if (A3.Text == "")
-                    return A3;
-                if (C1.Text == "")
-                    return C1;
-            }
-
-            if (C1.Text == "O")
-            {
-                if (A1.Text == "")
-                    return A3;
-                if (A3.Text == "")
-                    return A3;
-                if (C3.Text == "")
-                    return C3;
-            }
-
-            if (A1.Text == "")
-                return A1;
-            if (A3.Text == "")
-                return A3;
-            if (C1.Text == "")
-                return C1;
-            if (C3.Text == "")
-                return C3;
-
-            return null;
-        }
-        //Metoda sprawdzajaca zajęte pola jeżeli komputer ma mozliwośc wygranej wygra w innym przypadku zablokuje możliwośc wygranej graczowi
-        private Button WygrajLubBlokuj(string znak)//-WŁ
-        {
-
-            //Wyszukiwanie w poziomie
-            if ((A1.Text == znak) && (A2.Text == znak) && (A3.Text == ""))
-                return A3;
-            if ((A2.Text == znak) && (A3.Text == znak) && (A1.Text == ""))
-                return A1;
-            if ((A1.Text == znak) && (A3.Text == znak) && (A2.Text == ""))
-                return A2;
-
-            if ((B1.Text == znak) && (B2.Text == znak) && (B3.Text == ""))
-                return B3;
-            if ((B2.Text == znak) && (B3.Text == znak) && (B1.Text == ""))
-                return B1;
-            if ((B1.Text == znak) && (B3.Text == znak) && (B2.Text == ""))
-                return B2;
-
-            if ((C1.Text == znak) && (C2.Text == znak) && (C3.Text == ""))
-                return C3;
-            if ((C2.Text == znak) && (C3.Text == znak) && (C1.Text == ""))
-                return C1;
-            if ((C1.Text == znak) && (C3.Text == znak) && (C2.Text == ""))
-                return C2;
-
-            //Wyszukiwanie w pionie
-            if ((A1.Text == znak) && (B1.Text == znak) && (C1.Text == ""))
-                return C1;
-            if ((B1.Text == znak) && (C1.Text == znak) && (A1.Text == ""))
-                return A1;
-            if ((A1.Text == znak) && (C1.Text == znak) && (B1.Text == ""))
-                return B1;
-
-            if ((A2.Text == znak) && (B2.Text == znak) && (C2.Text == ""))
-                return C2;
-            if ((B2.Text == znak) && (C2.Text == znak) && (A2.Text == ""))
-                return A2;
-            if ((A2.Text == znak) && (C2.Text == znak) && (B2.Text == ""))
-                return B2;
-
-            if ((A3.Text == znak) && (B3.Text == znak) && (C3.Text == ""))
-                return C3;
-            if ((B3.Text == znak) && (C3.Text == znak) && (A3.Text == ""))
-                return A3;
-            if ((A3.Text == znak) && (C3.Text == znak) && (B3.Text == ""))
-                return B3;
-
-            //Wyszukiwanie na ukos
-            if ((A1.Text == znak) && (B2.Text == znak) && (C3.Text == ""))
-                return C3;
-            if ((B2.Text == znak) && (C3.Text == znak) && (A1.Text == ""))
-                return A1;
-            if ((A1.Text == znak) && (C3.Text == znak) && (B2.Text == ""))
-                return B2;
-
-            if ((A3.Text == znak) && (B2.Text == znak) && (C1.Text == ""))
-                return C1;
-            if ((B2.Text == znak) && (C1.Text == znak) && (A3.Text == ""))
-                return A3;
-            if ((A3.Text == znak) && (C1.Text == znak) && (B2.Text == ""))
-                return B2;
-
-            return null;
-        }
-
-
-
-
-
+            
+            RuchKomputera ruchKomputera = new RuchKomputera();
+        }       
 
         //Metoda sprawdzająca czy ktoś wygral lub zremisowano
         private void SprawdzWygrana()//-MK
@@ -306,10 +131,7 @@ namespace KiK
                 }
             }
         }
-
-
-
-
+       
         //Metoda wyłączająca pola gry po zakończeniu rozgrywki
         private void WylaczPrzyciski()//-WŁ
         {

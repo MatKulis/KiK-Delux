@@ -1,0 +1,10 @@
+C:\Users\Joker\Documents\KiK\KiK\KiK\bin\Debug\KiK.exe.config
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.exe
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.pdb
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK+klasy.csprojResolveAssemblyReference.cache
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.Form1.resources
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.MainForm.resources
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.Resource.resources
+C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK+klasy.csproj.GenerateResource.Cache
+C:\Users\Joker\Documents\KiK\KiK\KiK\bin\Debug\KiK.exe
+C:\Users\Joker\Documents\KiK\KiK\KiK\bin\Debug\KiK.pdb

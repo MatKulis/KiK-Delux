@@ -46,13 +46,3 @@ C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.Resource.resources
 C:\Users\Joker\Documents\KiK\KiK\KiK\obj\Debug\KiK.csproj.GenerateResource.Cache
 C:\Users\Joker\Documents\KiK\KiK\KiK\bin\Debug\KiK.exe
 C:\Users\Joker\Documents\KiK\KiK\KiK\bin\Debug\KiK.pdb
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\bin\Debug\KiK.exe.config
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.exe
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.pdb
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\bin\Debug\KiK.exe
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\bin\Debug\KiK.pdb
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.csprojResolveAssemblyReference.cache
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.Form1.resources
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.MainForm.resources
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.Resource.resources
-C:\Users\local\Downloads\Kolko-i-krzyzyk-master\Kolko-i-krzyzyk-master\KiK\KiK\obj\Debug\KiK.csproj.GenerateResource.Cache
